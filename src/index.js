@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+// importing milligram for some default styling for now
+import "milligram"
+
+//importing BrowserRouter as Router
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <React.StrictMode>
+      <Route component={App} />
+    </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );
 
